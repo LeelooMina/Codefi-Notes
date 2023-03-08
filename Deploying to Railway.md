@@ -144,12 +144,29 @@ The file should be similar to this:
 secret_key_base: 31123j123lk1l2l3sldf...
 ```
 
-You need to create a variable on the Railway website. Name the variable SECRET_KEY_BASE and set it to the long key from your credentials file. Remember to click the "add" button to save the new variable.
+You need to create a variable on the Railway website. Name the variable SECRET_KEY_BASE (all caps is imporant!) and set it to the long key from your credentials file. Remember to click the "add" button to save the new variable.
 
 Be sure to close the credentials file.
 
 **Wait for your app to finish building.**
 
 ## Using the Railway Command Line Interface
+
+```
+railway run
+```
+
+This command allows you to run regular rails commands in the production enviroment of your application on Railway. 
+
+Now that your app is done building, you need to migrate your database files inside the production enviroment. 
+
+```
+railway run rails db:migrate
+```
+
+## Check out your site!
+
+Inside the settings of your app on the Railway site, there should be a link to generate a domain for your application. This will be the url you can use to share your creation. You can also use a custom domain if you own one. 
+
 
 
